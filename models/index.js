@@ -4,7 +4,10 @@ mongoose.Promise = Promise;
 
 mongoose.connect(
     "mongodb://localhost/warbler",
-    { useNewUrlParser: true }
+    {
+        useNewUrlParser: true,
+        keepAlive: true
+    }
 );
 
 module.exports.User = require("./user");
